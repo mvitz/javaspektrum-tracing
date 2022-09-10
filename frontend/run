@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# build jar file
+mvn verify
+
+# OTEL agent configuration
+export OTEL_SERVICE_NAME=frontend
+#export OTEL_TRACES_EXPORTER=jaeger
+export OTEL_METRICS_EXPORTER=none
+
+# start application
+java \
+  -javaagent:../opentelemetry-javaagent.jar \
+  -jar target/apm-example-frontend.jar

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <h1 th:text="|Session ${sessionId}|">Session 1234</h1>
+        <form th:action="@{/{sessionId}(sessionId=${sessionId})}" th:method="PUT">
+            <label>Key <input type="text" name="key" /></label><br/>
+            <label>Value <input type="text" name="value" /></label><br/>
+            <input type="submit" value="Update session"/>
+        </form>
+        <form th:action="@{/{sessionId}(sessionId=${sessionId})}" th:method="DELETE">
+            <input type="submit" value="Transmit session"/>
+        </form>
+    </body>
+</html>
