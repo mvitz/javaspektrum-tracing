@@ -6,6 +6,10 @@ This example is written for my german [JavaSPEKTRUM](http://www.javaspektrum.de/
 article "Der Praktiker: Tracing in verteilten Anwendungen - Spuren im
 Microservicedschungel finden".
 
+You can read it online
+[here](https://www.innoq.com/de/articles/2023/03/microservices-tracing/)
+or download as PDF
+[here](http://file.sigs-datacom.de/publications/download/Artikel/vitz_JS_05_22_trnb.pdf).
 
 ## License
 
